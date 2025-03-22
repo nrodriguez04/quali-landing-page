@@ -1,102 +1,112 @@
-import Image from "next/image";
+// pages/index.js
+import React from 'react';
+// import MailchimpForm from '../components/MailchimpForm';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <section className="bg-white py-20 text-center">
+        <h1 className="text-4xl font-bold mb-4">
+          Automate Pre-Approvals &amp; Close More Loans
+        </h1>
+        <p className="text-lg text-gray-700 mb-8">
+          Collect borrower documents, generate pre-approval letters, and manage deals—without chasing paperwork.
+        </p>
+        {/*<MailchimpForm buttonText="Get Early Access" />*/}
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Pain Points */}
+      <section className="py-16 bg-gray-100">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl font-bold mb-6">Why Brokers Need You</h2>
+          <ul className="text-left mx-auto max-w-lg space-y-3">
+            <li>🛑 Tired of wasting hours on paperwork?</li>
+            <li>🛑 Losing deals waiting on borrower docs?</li>
+            <li>🛑 Manually writing pre-approval letters?</li>
+          </ul>
+          <p className="mt-6 text-lg">
+            QualiFi automates the tedious work, so you can focus on closing more loans.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-8">How It Works</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-6 bg-white rounded shadow">
+              <h3 className="text-xl font-bold mb-2">➊ Pre-Qualify Borrowers</h3>
+              <p>
+                Send borrowers a customizable questionnaire—VA, Self-Employed, Conventional, and more.
+              </p>
+            </div>
+            <div className="p-6 bg-white rounded shadow">
+              <h3 className="text-xl font-bold mb-2">➋ Collect Documents Automatically</h3>
+              <p>
+                Get W2s, Tax Returns, Bank Statements, and VA Forms uploaded via their portal.
+              </p>
+            </div>
+            <div className="p-6 bg-white rounded shadow">
+              <h3 className="text-xl font-bold mb-2">➌ Generate Pre-Approval Letters in Minutes</h3>
+              <p>
+                Generate branded letters in seconds, saving hours each week.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section className="py-16 bg-gray-100">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl font-bold mb-6">Why They’ll Love It</h2>
+          <ul className="space-y-3">
+            <li>✅ Close Loans Faster</li>
+            <li>✅ Automate Borrower Follow-Up</li>
+            <li>✅ Custom Pre-Approval Letter Templates</li>
+            <li>✅ Secure Document Collection</li>
+            <li>✅ Easy for Borrowers, Powerful for Brokers</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Early Access Offer */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl font-bold mb-6">Get Early Access</h2>
+          <p className="mb-8">
+            🚀 We’re opening QualiFi to a small group of brokers in early access.
+            <br />
+            ✔️ Founding Members Get Exclusive Pricing
+            <br />
+            ✔️ Priority Feature Input
+            <br />
+            ✔️ Dedicated Onboarding Support
+          </p>
+          {/*<MailchimpForm buttonText="Get Early Access Now" />*/}
+        </div>
+      </section>
+
+      {/* Social Proof */}
+      <section className="py-16 bg-gray-100">
+        <div className="max-w-4xl mx-auto text-center">
+          <blockquote className="italic text-lg">
+            &quot;QualiFi saves me hours every week—I can focus on closing loans, not chasing paperwork.&quot;
+          </blockquote>
+          <p className="mt-4 font-bold">— [First Beta Broker Name], Broker at [Company Name]</p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-8 bg-white text-center">
+        <p className="text-gray-600">&copy; {new Date().getFullYear()} QualiFi. All rights reserved.</p>
+        <div className="mt-2">
+          <a href="#" className="mx-2 text-blue-500">About QualiFi</a>
+          <a href="#" className="mx-2 text-blue-500">Contact</a>
+          <a href="#" className="mx-2 text-blue-500">Privacy Policy</a>
+        </div>
       </footer>
     </div>
   );
