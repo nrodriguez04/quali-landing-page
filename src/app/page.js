@@ -1,10 +1,12 @@
 // pages/index.js
 import React from 'react';
+import Navbar from './components/Navbar';
 // import MailchimpForm from '../components/MailchimpForm';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
+    <Navbar />
       {/* Hero Section */}
       <section className="bg-white py-20 text-center">
         <h1 className="text-4xl font-bold mb-4">
