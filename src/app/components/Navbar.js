@@ -1,6 +1,7 @@
 // components/Navbar.js
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Logo from '../../../public/QualiFiLogo.png';
 
 export default function Navbar() {
@@ -8,7 +9,9 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         <div className="text-xl font-bold text-blue-600">
+        <Link href="/">
           <Image src={Logo} alt="QualiFi Logo" width={60} height={20} priority />
+        </Link>
         </div>
         <div className="hidden md:flex space-x-6 text-sm font-medium">
           <a href="#how-it-works" className="hover:text-blue-600">How It Works</a>
